@@ -173,7 +173,7 @@ candidatos_map = {
                 "type": "keyword"
             },
             "NR_PROCESSO": {
-                "type": "keyword"
+                "type": "text"
             }
         }
     }
