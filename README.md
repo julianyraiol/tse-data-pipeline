@@ -4,6 +4,34 @@ Baixa e processa os arquivos referentes candidatos nas eleições de 1994 a 2020
 
 Fonte: [Tribunal Superior Eleitoral](https://www.tse.jus.br/hotsites/pesquisas-eleitorais/candidatos.html)
 
+### Estrutura do projeto
+
+```
+|-- README.md
+|
+|-- processing
+|   |-- mapping
+|   |-- elasticsearch_interface.py
+|   |-- main.py
+|
+|-- tse_candidatos
+|   |-- data
+|   |-- tse_candidatos
+|       | -- spiders
+|           | -- candidatos.py
+|           | -- processing.py
+|
+|       | -- items.py
+|       | -- middlewares.py
+|       | -- pipelines.py
+|       | -- settings.py
+|
+|-- Pipfile
+|-- Pipfile.lock
+|-- README.md
+`-- docker-compose.yml
+```
+
 ### Setup
 Este projeto requer **Python 3.+** e a instalação do [**Pipenv**](https://pipenv-fork.readthedocs.io/en/latest/install.html), arquivo que contém as dependências do projeto. Para instalá-lo, execute: 
 
@@ -47,7 +75,7 @@ $ scrapy crawl processing
 Execute o docker-compose para criar uma instância local do elasticsearch. Ele ficará rodando na endereço: http://localhost:9200/. 
 
 ```bash
-$ python3 -m processing.main
+$ docker-compose up -d
 ```
 
 Após isso, no diretório raiz, execute o seguinte comando para criar um index no elasticsearch.
