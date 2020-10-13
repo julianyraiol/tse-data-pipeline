@@ -21,7 +21,7 @@ Faça o clone deste projeto e execute o arquivo **Pipenv**:
 $ git clone https://github.com/julianyraiol/tse-data-pipeline.git
 $ cd tse-data-pipeline
 $ pipenv install
-$ pienv shell
+$ pipenv shell
 ```
 
 ### Para executar o crawler
@@ -40,6 +40,18 @@ Para extrair os arquivos, basta executar o seguinte comando:
 
 ```bash
 $ scrapy crawl processing
+```
 
-run
-python3 -m processing.main
+### Para persistir os dados no elasticsearch
+
+Execute o docker-compose para criar uma instância local do elasticsearch. Ele ficará rodando na endereço: http://localhost:9200/. 
+
+```bash
+$ python3 -m processing.main
+```
+
+Após isso, no diretório raiz, execute o seguinte comando para criar um index no elasticsearch.
+
+```bash
+$ python3 -m processing.main
+```
