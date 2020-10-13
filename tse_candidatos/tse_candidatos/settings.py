@@ -68,7 +68,13 @@ ITEM_PIPELINES = {
     'tse_candidatos.pipelines.TseCandidatosDownloadPipeline': 1
 }
 
-FILES_STORE = '/home/julianyraiol/juliany/tse-data-pipeline/tse_candidatos/data/'
+FILES_STORE = 'data'
+
+DOWNLOAD_MAXSIZE = 0
+DOWNLOAD_WARNSIZE = 0
+DOWNLOAD_TIMEOUT = 3600
+
+ELASTICSEARCH_HOST = "localhost:9200"
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
