@@ -7,8 +7,6 @@ Fonte: [Tribunal Superior Eleitoral](https://www.tse.jus.br/hotsites/pesquisas-e
 ### Estrutura do projeto
 
 ```
-|-- README.md
-|
 |-- processing
 |   |-- mapping
 |   |-- elasticsearch_interface.py
