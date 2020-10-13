@@ -37,7 +37,7 @@ Este projeto requer **Python 3.+** e a instalação do [**Pipenv**](https://pipe
 pip install pipenv
 ```
 
-Caso, haja algum problema durante a instação do pacote, veja a documentação da ferramenta.
+Caso haja algum problema durante a instação do pacote, veja a documentação da ferramenta.
 
 ### Configuração o projeto
 
@@ -76,7 +76,7 @@ Execute o docker-compose para criar uma instância local do elasticsearch. Ele f
 $ docker-compose up -d
 ```
 
-Após isso, no diretório raiz, execute o seguinte comando para criar um index no elasticsearch.
+Após isso, no diretório raiz, execute o seguinte comando para criar um index no elasticsearch e inserir dados.
 
 ```bash
 $ python3 -m processing.main
