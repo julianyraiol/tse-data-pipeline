@@ -81,3 +81,9 @@ Após isso, no diretório raiz, execute o seguinte comando para criar um index n
 ```bash
 $ python3 -m processing.main
 ```
+
+### Para realizar consultas diretamente do elasticsearch
+
+```bash
+curl -X GET "localhost:9200/candidatos/_search?pretty"
+```
